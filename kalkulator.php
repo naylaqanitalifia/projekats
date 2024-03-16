@@ -21,7 +21,7 @@
         switch ($operator) {
             case '+':
                 $hasil = $angkaPertama + $angkaKedua;
-                break;
+                break;  
 
             case '-':
                 $hasil = $angkaPertama - $angkaKedua;
@@ -72,6 +72,7 @@
 
         <?php if (isset($_POST["hasil"])) { ?>
           <label for="hasil">Hasil</label>
+          <input type="text" class="form-control" id="hasil" value="<?php echo $angkaPertama . " " . $operator . " " . $angkaKedua . " " . "=" . " " . $hasil; ?>" readonly>
         <?php }else { ?>
           <label for="hasil">Hasil</label>
           <input type="text" placeholder="0" id="hasil" class="form-control">
